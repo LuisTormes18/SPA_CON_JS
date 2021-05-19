@@ -10,16 +10,22 @@ export const Router = () => {
   let w = window;
   let { hash } = location;
   const $root = d.getElementById("root");
-  const $form_container = d.getElementById("form-container");
+  ajax(api.URL, {}, (res) => console.log(res));
   // Routes
   if (!hash) {
     $root.appendChild(HomeComponent());
-    d.getElementById("form-container").innerHTML = LoginComponent();
+    const $form_container = d.getElementById("form-container");
+    // d.getElementById("form-container").innerHTML = LoginComponent();
+    hash = "#Login";
   }
   if (hash === "#Login") {
-    $form_container.innerHTML = LoginComponent();
-    d.getElementById("formulario-login").addEventListener("submit", () => {
-      console.log("datos")
+    d.getElementById("form-container").innerHTML = LoginComponent();
+    const $formLogin = d.getElementById("formulario-login");
+    $formLogin.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData($formLogin);
+      console.log(data.get("email"));
+      localStorage.token = "ESTEESUNTOKENDEPRUEBA";
     });
   }
   if (hash === "#Register") {
