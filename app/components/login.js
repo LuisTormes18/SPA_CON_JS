@@ -1,7 +1,7 @@
 import { RegisterComponent } from "./register.js";
 export const LoginComponent = () => {
   const $form_login = ` <div class="login-form">
-      <form id="formulario-login">
+      <form method="post" id="formulario-login">
         <div class="form-group">
           <label>Email</label>
           <input type="text" name="email" class="form-control" placeholder="@Email" />
