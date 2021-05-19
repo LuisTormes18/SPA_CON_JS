@@ -10,7 +10,7 @@ export const Router = () => {
   let w = window;
   let { hash } = location;
   const $root = d.getElementById("root");
-  ajax(api.URL, {}, (res) => console.log(res));
+
   // Routes
   if (!hash) {
     $root.appendChild(HomeComponent());
