@@ -10,7 +10,7 @@ export const LoginComponent = () => {
           <label>Password</label>
           <input type="password" class="form-control" placeholder="Password" />
         </div>
-        <a href="#agenda" type="submit" class="btn btn-black">Login</a>
+        <button id="btn-login" type="submit" class="btn btn-black">Login</button>
         <a href="#Register" id="btn-show-form-register"  class="btn btn-secondary">Register</a>
       </form>
     </div>`;

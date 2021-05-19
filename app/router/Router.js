@@ -11,20 +11,22 @@ export const Router = () => {
   let { hash } = location;
   const $root = d.getElementById("root");
   const $form_container = d.getElementById("form-container");
-
   // Routes
   if (!hash) {
     $root.appendChild(HomeComponent());
     d.getElementById("form-container").innerHTML = LoginComponent();
   }
+  if (hash === "#Login") {
+    $form_container.innerHTML = LoginComponent();
+    d.getElementById("formulario-login").addEventListener("submit", () => {
+      console.log("datos")
+    });
+  }
   if (hash === "#Register") {
     $form_container.innerHTML = RegisterComponent();
   }
-  if (hash === "#Login") {
-    $form_container.innerHTML = LoginComponent();
-  }
   if (hash === "#agenda") {
-    $root.removeChild(HomeComponent());
-    // $root.appendChild(AgendaComponent());
+    $root.innerHTML = ``;
+    $root.appendChild(AgendaComponent());
   }
 };
