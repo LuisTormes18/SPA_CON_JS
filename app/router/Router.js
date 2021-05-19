@@ -24,8 +24,8 @@ export const Router = () => {
     $formLogin.addEventListener("submit", (event) => {
       event.preventDefault();
       const data = new FormData($formLogin);
-      console.log(data.get("email"));
-      localStorage.token = "ESTEESUNTOKENDEPRUEBA";
+      // localStorage.token = "ESTEESUNTOKENDEPRUEBA";
+      
     });
   }
   if (hash === "#Register") {
