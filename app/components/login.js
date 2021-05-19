@@ -1,21 +1,6 @@
-export const login = `<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> .
-<style>
-  
-</style>
-<div class="sidenav">
-  <div class="login-main-text">
-    <h2>
-      Application<br />
-      Login Page
-    </h2>
-    <p>Login or register from here to access.</p>
-  </div>
-</div>
-<div class="main">
-  <div class="col-md-6 col-sm-12">
-    <div class="login-form">
+import { RegisterComponent } from "./register.js";
+export const LoginComponent = () => {
+  const $form_login = ` <div class="login-form">
       <form id="formulario-login">
         <div class="form-group">
           <label>User Name</label>
@@ -25,9 +10,11 @@ export const login = `<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/
           <label>Password</label>
           <input type="password" class="form-control" placeholder="Password" />
         </div>
-        <button type="submit" class="btn btn-black">Login</button>
-        <button type="submit" class="btn btn-secondary">Register</button>
+        <a href="#agenda" type="submit" class="btn btn-black">Login</a>
+        <a href="#Register" id="btn-show-form-register"  class="btn btn-secondary">Register</a>
       </form>
-    </div>
-  </div>
-</div> `;
+    </div>`;
+  return $form_login;
+};
+
+

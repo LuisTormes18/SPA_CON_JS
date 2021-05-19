@@ -1,7 +1,7 @@
 // https://api-contactos-node-mysql.herokuapp.com/
 // url de mi api
-const URL = `http://localhost:3000/`;
-// const URL = `https://api-contactos-node-mysql.herokuapp.com/`;
+// const URL = `http://localhost:3000/`;
+const URL = `https://api-contactos-node-mysql.herokuapp.com/`;
 const USER = `${URL}/user`;
 const CONTACTS = `${URL}/contacts/`;
 
@@ -17,7 +17,7 @@ const ADD_CONTACT = `/${CONTACTS}/add`;
 const UPDATE_CONTACT = `/${CONTACTS}/update`;
 const DELETE_CONTACT = `/${CONTACTS}/delete/:id`;
 
-export {
+export const api = {
   URL,
   LOGIN_USER,
   REGISTER_USER,
